@@ -50,7 +50,7 @@ function createRestartScreen() {
   var restartScreen = `
    <div class="curtain">
       <div class="row restart animated flipInY">
-          <div class="col-xs-12 text-center">
+          <div class="col-xs-12 text-center score">
             <span class="head">SCORE </span>
             <span class="value">${Math.round(1000/(timeTaken + (movesTaken*10)))} </span>
           </div>

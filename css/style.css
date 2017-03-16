@@ -87,17 +87,18 @@
 }
 
 .head {
-  font-size: 23px;
   font-weight: 900;
 }
 
 .value {
-  font-size: 23px;
   font-weight: 100;
 }
 
+.score {
+  font-size: 23px; 
+}
+
 .brand {
-  font-size: 23px;
   font-weight: 300;
   font-family: 'Roboto', sans-serif;
 }
