@@ -1,5 +1,5 @@
-.bg-gradient {
-  height: 90vh;
+.bg {
+  height: 100%;
   width: 100%;
   z-index: -1000;
   background-image: url(../images/playstation-pattern.png);
@@ -7,8 +7,9 @@
   position: absolute;
   top: 0;
   left: 0;
-  transform: skew(0deg,-20deg);
+  //transform: skew(0deg,-20deg);
 }
+
 .card {
   top: 20vh;
   background-color: white;
@@ -26,6 +27,11 @@
   padding-left: 0;
   padding-right: 0;
   background: transparent;
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -o-perspective: 1000;
+  perspective: 1000;
+
 }
 
 .tile:before{
@@ -41,14 +47,75 @@
   box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
-.content {
-  position:  absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
+.tile.flipped .content {
+  transform: rotateY(180deg);
+}
+
+.content{
+  transition: 0.6s;
+  transform-style: preserve-3d;
+
+}
+
+.content, .front, .back {
   height:100%;
+  width: 100%;
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+  background: #ccc;
+}
+
+.red {
+  background-color: #f9d4ce;
+}
+
+.green {
+  background-color: #dae7ce;
+}
+
+.purple {
+  background-color: #dcdbea;
+}
+
+.orange {
+  background-color: #f9e7ce;
+}
+
+.cyan {
+  background-color: #ceecf9;
+}
+
+.pink {
+  background-color: #f9cee1;
+}
+
+.grey {
+  background-color: #ececec;
+}
+
+.yellow {
+  background-color: #fff9c2;
 }
