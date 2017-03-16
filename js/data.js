@@ -1,82 +1,82 @@
 data = [
   {
     id: "square",
-    color: "red",
+    colorClass: "red",
     icon: "fa-square-o"
   },
   {
     id: "square",
-    color: "red",
+    colorClass: "red",
     icon: "fa-square-o"
   },
   {
     id: "circle",
-    color: "green",
+    colorClass: "green",
     icon: "fa-circle-o"
   },
   {
     id: "circle",
-    color: "green",
+    colorClass: "green",
     icon: "fa-circle-o"
   },
   {
     id: "dimond",
-    color: "purple",
+    colorClass: "purple",
     icon: "fa-diamond"
   },
   {
     id: "dimond",
-    color: "purple",
+    colorClass: "purple",
     icon: "fa-diamond"
   },
   {
     id: "superpower",
-    color: "orange",
+    colorClass: "orange",
     icon: "fa-superpowers"
   },
   {
     id: "superpower",
-    color: "orange",
+    colorClass: "orange",
     icon: "fa-superpowers"
   },
   {
     id: "magic",
-    color: "cyan",
+    colorClass: "cyan",
     icon: "fa-magic"
   },
   {
     id: "magic",
-    color: "cyan",
+    colorClass: "cyan",
     icon: "fa-magic"
   },
   {
     id: "heart",
-    color: "pink",
-    icon: "fa-heart-0"
+    colorClass: "pink",
+    icon: "fa-heart-o"
   },
   {
     id: "heart",
-    color: "pink",
-    icon: "fa-heart-0"
+    colorClass: "pink",
+    icon: "fa-heart-o"
   },
   {
     id: "star",
-    color: "yellow",
-    icon: "fa-star-0"
+    colorClass: "yellow",
+    icon: "fa-star-o"
   },
   {
     id: "star",
-    color: "yellow",
-    icon: "fa-star-0"
+    colorClass: "yellow",
+    icon: "fa-star-o"
   },
   {
     id: "minus",
-    color: "grey",
+    colorClass: "grey",
     icon: "fa-minus"
   },
   {
     id: "minus",
-    color: "grey",
+    colorClass: "grey",
     icon: "fa-minus"
   }
 ];

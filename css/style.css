@@ -21,7 +21,7 @@
 
 
 .tile {
-  border: solid 1.2px #ccc;
+  border: solid 1px #ccc;
   border-radius: 5px;
   position: relative;
   padding-left: 0;
@@ -47,7 +47,7 @@
   box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
-.tile.flipped .content {
+.tile:hover .content, .tile.flipped .content {
   transform: rotateY(180deg);
 }
 
@@ -85,6 +85,7 @@
 /* back, initially hidden pane */
 .back {
 	transform: rotateY(180deg);
+  padding: 4px;
 }
 
 .red {
@@ -92,15 +93,15 @@
 }
 
 .green {
-  background-color: #dae7ce;
+  background-color: #d4eac1;
 }
 
 .purple {
-  background-color: #dcdbea;
+  background-color: #d2d1e0
 }
 
 .orange {
-  background-color: #f9e7ce;
+  background-color: #f7dcb8;
 }
 
 .cyan {
@@ -116,5 +117,5 @@
 }
 
 .yellow {
-  background-color: #fff9c2;
+  background-color: #ffed93
 }
