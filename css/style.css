@@ -95,12 +95,15 @@
 }
 
 .score {
-  font-size: 23px; 
+  font-size: 23px;
 }
 
 .brand {
   font-weight: 300;
   font-family: 'Roboto', sans-serif;
+}
+.small {
+  font-size: 15px;
 }
 .content, .front, .back {
   height:100%;
