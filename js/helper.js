@@ -1,4 +1,5 @@
 /*jshint esversion: 6 */
+
 // Global Variable Declarations
 var openTiles = [];
 var matchedTiles = [];
@@ -7,8 +8,11 @@ var timeTaken,
 var movesTaken;
 
 function updateMoves(init = null) {
-  // function takes a value and initialize the moves taken to that value.
-  // if no value is passed the function will increment current value of moves by 1.
+  /**
+  * @description :takes a value and initialize the moves taken to that value.
+  * if no value is passed the function will increment current value of moves by 1.
+  * @param {number} init - The value to be initialized to movesTaken
+  */
   if (init != null) {
     movesTaken = init;
   } else {
@@ -18,8 +22,12 @@ function updateMoves(init = null) {
 }
 
 function createTile(tile, row) {
-  // function takes the row element and tile object
-  // creates and appends a tile to row element
+  /*
+  * @description: Function takes the row element and tile object
+  * Creates and appends a tile to row element
+  * @param {Object} tile - Contains detais used to create the tile element
+  * @param {row DOM element} row - The in which the tile will be appended
+  */
   var $tile = $("<div class='tile col-xs-3'> </div>");
   var $content = $("<div class='content'></div>");
   var $front = $("<div class='front'></div>");
@@ -30,7 +38,16 @@ function createTile(tile, row) {
 }
 
 function getRandomTile(tiles) {
-  // takes in a tiles object with following keys: array ( array of tiles object), rand ( random objec from tiles array), index ( index of random objec from tiles array)
+  /*
+  * @description: Function takes in a tiles object with following keys:
+  * array ( array of tiles object),
+  * rand ( random objec from tiles array),
+  * index ( index of random objec from tiles array)
+  * Creates and appends a tile to row element
+  * @param {Object} tiles - Contains the array, the random element to be seleceted, index of the element
+  * @return {object} tiles - Contains the new array, the new random element to be seleceted, new index of the element
+  */
+
   tiles.index = Math.floor(Math.random() * tiles.array.length);
   tiles.rand = tiles.array[tiles.index];
   tiles.array.splice(tiles.index, 1);
@@ -38,7 +55,11 @@ function getRandomTile(tiles) {
 }
 
 function createTiles(tilesArray) {
-  // function takes in array of objects and then creates a grid of tiles of size 4 * 4.
+  /*
+  * @description: Function takes in array of objects and then creates a grid of tiles of size 4 * 4.
+  * @param {array} tilesArray - Contains the array, the random element to be seleceted, index of the element
+  * @return {object} tiles - Contains the new array, the new random element to be seleceted, new index of the element
+  */
   var tiles = {
     array: tilesArray
   };
@@ -55,7 +76,9 @@ function createTiles(tilesArray) {
 }
 
 function createRestartScreen() {
-  // After the game completes this function renders the restart screen
+  /*
+  * @description: After the game completes this function renders the restart screen
+  */
   var restartScreen = `
    <div class="curtain">
       <div class="row restart animated flipInY">
@@ -88,9 +111,11 @@ function createRestartScreen() {
 }
 
 function gameOver() {
-  // function invoked when the game ends
-  // renders the restart screen
-  // apply restart game click binding
+  /*
+  * @description: function invoked when the game ends
+  * renders the restart screen
+  * apply restart game click binding
+  */
   clearInterval(timeCounter);
   $('.restart').addClass('flipInY');
   createRestartScreen();
@@ -101,7 +126,11 @@ function gameOver() {
 }
 
 function flipIt(self) {
-  // flip takes in the dom tile element that needs to be flipped.
+  /*
+  * @description: flip takes in the dom tile element that needs to be flipped.
+  * renders the restart screen
+  * apply restart game click binding
+  */
   if (openTiles.length < 2) {
     // Length is less than 2.
     // thus the tile is flipped
@@ -138,8 +167,10 @@ function flipIt(self) {
 }
 
 function clickListen(self) {
-  // apply click listener to a tile that flips it
-  // if the tile is already flipped, then unflip it.
+  /*
+  * @description: apply click listener to a tile that flips it
+  * if the tile is already flipped, then unflip it.
+  */
   $(self).removeClass('flipped');
   $(self).click(function() {
     flipIt(this);
@@ -147,8 +178,10 @@ function clickListen(self) {
 }
 
 function startGame() {
-  // Starts the game when the play buttom is clicked
-  // calls the function that renders the tile grid.
+  /*
+  * @description: Starts the game when the play buttom is clicked
+  * calls the function that renders the tile grid.
+  */
   createTiles(data.slice());
 
   // apply click binding to all the tiles
@@ -170,8 +203,10 @@ function startGame() {
 
 }
 
-// This function apply the start game click binding after the whole dom has loaded.
 $(function() {
+  /*
+  * @description: This function apply the start game click binding after the whole dom has loaded.
+  */
   $("#start").click(function() {
     startGame();
     $(this).off();
