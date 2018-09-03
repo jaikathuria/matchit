@@ -81,7 +81,7 @@
 }
 
 .content {
-  transition: 0.5s;
+  transition: 0.6s;
   transform-style: preserve-3d;
   cursor: pointer;
 }

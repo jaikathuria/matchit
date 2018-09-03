@@ -8,7 +8,7 @@ import { BACK, FRONT } from '../../../utils/_constants'
 export default class Grid extends Component {
 
 	state = {
-		cards: this.flipAll(shuffle(_getData()),FRONT)
+		cards: []
 	}
 
 	openCards = []
@@ -33,14 +33,13 @@ export default class Grid extends Component {
 		if(this.openCards.length < 2){
 			this.flip(index,FRONT)
 			this.openCards.push(index)
-			this.openCards.length === 2 && setTimeout(this.checkMatch.bind(this),500)
+			this.openCards.length === 2 && setTimeout(this.checkMatch.bind(this),600)
 		}
 	}
 
 	closePair(){
 		this.flip(this.openCards[0],BACK)
 		this.flip(this.openCards[1],BACK)
-		this.props.updateMove()
 	}
 
 	checkMatch(){
@@ -51,10 +50,15 @@ export default class Grid extends Component {
 		} else {
 			this.closePair()
 		}
+		this.props.updateMove()
 		this.openCards.splice(0,2)
 	}
 
 	componentDidMount(){
+		this.setState({
+			cards: this.flipAll(shuffle(_getData()),FRONT)
+		})
+
 		setTimeout(()=>{
 			this.props.startTimer()
 			this.setState((state)=>{
@@ -62,7 +66,7 @@ export default class Grid extends Component {
 					cards: this.flipAll(state.cards,BACK)
 				}
 			})	
-		},1500)
+		},1700)
 	}
 
 	render() {

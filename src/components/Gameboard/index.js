@@ -10,7 +10,7 @@ export default class Gameboard extends Component {
 		status: START
 	}
 
-	matched = 6
+	matched = 0
 
 	updateMatched(){
 		this.matched += 1
@@ -22,10 +22,16 @@ export default class Gameboard extends Component {
 		}
 	}
 
-	handleStatus = (status) => {
+	handleStatus(status){
 		this.setState({
 			status
 		})
+	}
+
+	resetGame(){
+		this.props.reset()
+		this.matched = 0
+		this.handleStatus(START)
 	}
 
 	render(){
@@ -51,6 +57,7 @@ export default class Gameboard extends Component {
 							<Final
 								moves={moves}
 								time={time}
+								restart={this.resetGame.bind(this)}
 							/>
 						}
 					</div>

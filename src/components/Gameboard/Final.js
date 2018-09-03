@@ -8,9 +8,9 @@ export default class Final extends Component {
 				<div className="row restart animated flipInY">
 					<div className="col-xs-12 text-center score">
 						<span className="value">SCORE </span>
-						<span className="head">${Math.round(1000 / (time + (moves * 10)))} </span>
+						<span className="head">{Math.round(1000 / (time + (moves * 10)))}</span>
 					</div>
-					<div className="col-xs-12 text-center margin-top-5" id="restart">
+					<div className="col-xs-12 text-center margin-top-5" onClick={this.props.restart}>
 						<i className="fa fa-repeat fa-4x"></i>
 					</div>
 					<div className="col-xs-offset-2 col-xs-8 margin-top-5 star">

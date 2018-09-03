@@ -9,9 +9,16 @@ class App extends Component {
 		time: 0
 	}
 
-	updateMove() {
+	updateMoves() {
 		this.setState({
 			moves: (-(~this.state.moves)) // Bitwise method to increment by 1
+		})
+	}
+
+	reset(){
+		this.setState({
+			moves: 0,
+			time: 0
 		})
 	}
 
@@ -40,9 +47,10 @@ class App extends Component {
 				<Gameboard
 					moves={moves}
 					time={time}
-					updateMove={this.updateMove.bind(this)}
+					updateMove={this.updateMoves.bind(this)}
 					startTimer={this.startTimer.bind(this)}
 					stopTimer={this.stopTimer.bind(this)}
+					reset={this.reset.bind(this)}
 				/>
 			</div>
 		)
