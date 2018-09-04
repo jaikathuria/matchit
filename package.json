@@ -1,6 +1,7 @@
 {
   "name": "matchit",
   "version": "0.1.0",
+  "homepage": "https://jaikathuria.github.io/matchit",
   "private": true,
   "dependencies": {
     "animate.css": "^3.7.0",
@@ -19,7 +20,9 @@
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
@@ -28,6 +31,7 @@
     "eslint-plugin-flowtype": "^2.34.1",
     "eslint-plugin-import": "^2.6.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
-    "eslint-plugin-react": "^7.1.0"
+    "eslint-plugin-react": "^7.1.0",
+    "gh-pages": "^1.2.0"
   }
 }

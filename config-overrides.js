@@ -1,4 +1,4 @@
-const {rewireWorkboxInject, defaultInjectConfig} = require('react-app-rewire-workbox')
+const { rewireWorkboxInject, defaultInjectConfig } = require('react-app-rewire-workbox')
 const path = require('path')
 
 module.exports = function override(config, env) {
@@ -7,8 +7,8 @@ module.exports = function override(config, env) {
 	  	// Extend the default injection config with required swSrc
 	  	const workboxConfig = {
 			...defaultInjectConfig,
-			swSrc: path.join(__dirname, "src", "sw.js"),
-			importWorkboxFrom: "local" // Add this propertie
+			swSrc: path.join(__dirname, 'src', 'sw.js'),
+			importWorkboxFrom: 'local' // Add this propertie
 	  	}
 		config = rewireWorkboxInject(workboxConfig)(config, env);
 	}
