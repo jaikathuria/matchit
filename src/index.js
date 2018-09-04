@@ -12,6 +12,8 @@ import 'font-awesome/css/font-awesome.min.css'
 /* Import Styles */ 
 import './styles/App.css'
 
+/* Import Service Worker */
+import registerServiceWorker from './registerServiceWorker'
 
-ReactDOM.render(<App />, document.getElementById('root'));
-
+ReactDOM.render(<App />, document.getElementById('root'))
+registerServiceWorker()
