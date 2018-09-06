@@ -1,7 +1,7 @@
 {
   "name": "matchit",
   "version": "0.1.0",
-  "homepage": "https://jaikathuria.github.io/",
+  "homepage": "https://jaikathuria.github.io/matchit",
   "private": true,
   "dependencies": {
     "animate.css": "^3.7.0",
