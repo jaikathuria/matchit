@@ -1,4 +1,4 @@
-importScripts("/matchit/precache-manifest.064ccbac6d192673bd156890349a00c9.js", "/matchit/workbox-v3.4.1/workbox-sw.js");
+importScripts("/matchit/precache-manifest.527c2a95258bd647616bc6ca7184978d.js", "/matchit/workbox-v3.4.1/workbox-sw.js");
 workbox.setConfig({modulePathPrefix: "/matchit/workbox-v3.4.1"});
 // See https://developers.google.com/web/tools/workbox/guides/configure-workbox
 workbox.core.setLogLevel(workbox.core.LOG_LEVELS.debug);
