@@ -18,11 +18,10 @@
   background-image: url(../images/memphis-colorful.png);
 }
 
-.curtain {
+.curtain, .final {
   width: calc(100% + 30px);
   position: relative;
   perspective: 1000;
-  background: url(../images/Sports.png);
   padding-left: 0;
   padding-right: 0;
   margin-left: -15px;
@@ -30,7 +29,18 @@
   color: #777;
 }
 
-.curtain:before {
+.curtain {
+  background: url(../images/Sports.png);
+}
+
+.final {
+  background-color: #777;
+  color: #f6f6f6;
+
+}
+
+
+.curtain:before , .final:before{
   content: "";
   display: block;
   padding-top: 100%;
@@ -61,13 +71,19 @@
   box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
+.tile.flipped{
+  pointer-events: none;
+}
+
 .tile.flipped .content {
   transform: rotateY(180deg);
+  cursor: none;
 }
 
 .content {
   transition: 0.6s;
   transform-style: preserve-3d;
+  cursor: pointer;
 }
 
 .restart {
@@ -82,6 +98,10 @@
 
 .margin-top-5 {
   margin-top: 5%;
+}
+
+.margin-top-30 {
+  margin-top: 30px;
 }
 
 .head {
@@ -176,4 +196,9 @@
 
 .star {
   color: #ffec84;
+}
+
+
+.curtain {
+  cursor: pointer;
 }

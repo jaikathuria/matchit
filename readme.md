@@ -13,15 +13,19 @@ The game board consists of sixteen cards arranged randomly in a grid. The deck i
 ## How to open the Game:
 
 * Clone or download this repository.
-* Inside the repository, open `index.html`
-* You are all set to play the game. Just click to start the game.
+* Inside the repository, run 
+  - `yarn`
+  - `yarn start`
+* Doing above should open a broswer with URL as `http://127.0.0.1:3000/` if not manually open http://127.0.0.1:3000/ in a browser.
+
+You are all set to play the game. Just click to start the game.
 
 ## Libraries, Frameworks used and References.
 
 * [Bootstrap](http://getbootstrap.com/)
 * [Font Awesome](fontawesome.io)
 * [Animate.css](https://daneden.github.io/animate.css/)
-* [jQuery](https://jquery.com/)
+* [ReactJS](https://reactjs.org/)
 * [Flip Animation Reference](https://codepen.io/darkwing/pen/bCali)
 * [Backgrounds](https://www.toptal.com/designers/subtlepatterns/)
 

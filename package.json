@@ -1,0 +1,41 @@
+{
+  "name": "matchit",
+  "version": "0.1.0",
+  "homepage": "https://jaikathuria.github.io/matchit",
+  "private": true,
+  "dependencies": {
+    "animate.css": "^3.7.0",
+    "bootstrap": "3.3.7",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "font-awesome": "^4.7.0",
+    "glob-all": "^3.1.0",
+    "lighthouse": "^3.0.3",
+    "purgecss": "^1.1.0",
+    "purgecss-webpack-plugin": "^1.2.1",
+    "react": "^16.4.2",
+    "react-app-rewire-workbox": "^2.0.1",
+    "react-app-rewired": "^1.6.2",
+    "react-dom": "^16.4.2",
+    "react-scripts": "1.1.5",
+    "typeface-roboto": "^0.0.54",
+    "workbox-webpack-plugin": "^3.4.1"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test --env=jsdom",
+    "eject": "react-scripts eject",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "eslint": "^4.1.1",
+    "eslint-config-react-app": "^2.1.0",
+    "eslint-plugin-flowtype": "^2.34.1",
+    "eslint-plugin-import": "^2.6.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.1.0",
+    "gh-pages": "^1.2.0"
+  }
+}
